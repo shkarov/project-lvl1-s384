@@ -1,0 +1,15 @@
+{
+    "name": "shkarov/brain-games",
+    "bin": [
+	"bin/brain-games"
+    ],
+    "description": "Project Brain Games",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Boris Shkarov",
+            "email": "b.shkarov@gmail.com"
+        }
+    ],
+    "require": {}
+}
