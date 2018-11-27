@@ -1,1 +1,12 @@
-make lint
+language: php
+php:
+  - '7.1'
+
+install:
+  - composer self-update
+  - make install
+
+lint: make lint test
+
+after_script:
+  - vendor/bin/test-reporter
