@@ -11,6 +11,9 @@
             "email": "b.shkarov@gmail.com"
         }
     ],
+    "scripts": {
+         "phpcs": "phpcs"
+    },
     "autoload": {
         "files": ["src/Cli.php"]
     },
