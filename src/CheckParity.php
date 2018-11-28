@@ -16,8 +16,8 @@ function check()
     echo "\n";
     
     $countCorrect = 0
-    for ($i = 0; $i < 3; $i++) { 
-        $randomNumber = rand(1,100);
+    for ($i = 0; $i < 3; $i++) {
+        $randomNumber = rand(1, 100);
         \cli\line("Question:, %i", $randomNumber);
         $answerNumber = \cli\prompt('Your answer:');
         if (isParity($randomNumber) == isParity($answerNumber)) {
@@ -30,7 +30,7 @@ function check()
         }
     }
     if ($countCorrect == 3) {
-        \cli\line("Congratulations, %s!", $name);    
+        \cli\line("Congratulations, %s!", $name);
     }
     return;
 }
