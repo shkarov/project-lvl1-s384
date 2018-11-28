@@ -1,7 +1,8 @@
 {
     "name": "shkarov/brain-games",
     "bin": [
-	"bin/brain-games"
+	"bin/brain-games",
+	"bin/brain-even"    
     ],
     "description": "Project Brain Games",
     "type": "project",
@@ -16,7 +17,8 @@
     },
     "autoload": {
          "psr-4": {
-         "BrainGames\\Cli\\": "src"
+         "BrainGames\\Cli\\": "src",
+	 "BrainGames\\CheckParity\\": "src" 	 
          }
     },	
     "require": {
