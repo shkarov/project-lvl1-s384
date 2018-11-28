@@ -8,5 +8,5 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-
-BrainGames\Cli\run();
+use function BrainGames\Cli\run;
+run();
