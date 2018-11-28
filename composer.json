@@ -15,8 +15,10 @@
          "phpcs": "phpcs"
     },
     "autoload": {
-        "files": ["src/Cli.php"]
-    },
+         "psr-4": {
+         "BrainGames\\Cli\\": "src"
+         }
+    },	
     "require": {
         "wp-cli/php-cli-tools": "*"
     },
