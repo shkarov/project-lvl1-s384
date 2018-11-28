@@ -17,8 +17,8 @@
     },
     "autoload": {
          "psr-4": {
-         "BrainGames\\Cli\\": "src",
-	 "BrainGames\\CheckParity\\": "src" 	 
+             "BrainGames\\Cli\\": "src",
+	     "BrainGames\\CheckParity\\": "src" 	 
          }
     },	
     "require": {
