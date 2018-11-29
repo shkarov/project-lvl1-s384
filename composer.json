@@ -17,9 +17,10 @@
     },
     "autoload": {
          "psr-4": {
-             "BrainGames\\Cli\\": "src",
-	     "BrainGames\\CheckParity\\": "src" 	 
-         }
+             "BrainGames\\Cli\\": "src/",
+             "BrainGames\\CheckParity\\": "src/"
+         },
+         "files": ["src/Cli.php", "src/CheckParity.php"]
     },	
     "require": {
         "wp-cli/php-cli-tools": "*"
