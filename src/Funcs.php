@@ -44,3 +44,24 @@ function algEuclidian($num1, $num2)
     }
     return $num1;
 }
+function createArray($num1, $num2)
+{
+    $arr = [];
+    $arr[0] = $num1;
+    for ($i = 1; $i < 10; $i++) {
+        $arr[$i]  = $arr[$i - 1] + $num2;
+    }
+    return $arr;
+}
+function createStrProgress($arr, $numHidden)
+{
+    $strProgress = "";    
+    foreach ($arr as $key => $value) {
+        if ($key !== $numHidden) {
+            $strProgress .= " {$value}";
+        } else {
+            $strProgress .= " ..";  
+        }    
+    }
+    return $strProgress;
+}

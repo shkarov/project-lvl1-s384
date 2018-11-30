@@ -17,9 +17,10 @@
              "BrainGames\\CheckParity\\": "src/",
              "BrainGames\\Calc\\": "src/",
              "BrainGames\\Funcs\\": "src/",
-             "BrainGames\\Gcd\\": "src/"
+             "BrainGames\\Gcd\\": "src/",
+             "BrainGames\\Progression\\": "src/"
          },
-         "files": ["src/CheckParity.php", "src/Calc.php", "src/Funcs.php", "src/Gcd.php"]
+         "files": ["src/CheckParity.php", "src/Calc.php", "src/Funcs.php", "src/Gcd.php", "src/Progression.php"]
     },	
     "require": {
         "wp-cli/php-cli-tools": "*"

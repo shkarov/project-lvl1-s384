@@ -4,6 +4,7 @@ use BrainGames\Funcs;
 use BrainGames\CheckParity;
 use BrainGames\Calc;
 use BrainGames\Gcd;
+use BrainGames\Progression;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -19,6 +20,7 @@ $isOK = false;
 \cli\line('1. Parity check');
 \cli\line('2. Calculator');
 \cli\line('3. Greatest common divisor');
+\cli\line('4. Arithmetic progression');
 $game = \cli\prompt('Select game');
 switch ($game) {
     case "1":
@@ -29,6 +31,9 @@ switch ($game) {
         break;
     case "3":
         $isOK = Gcd\gcd();
-        break;    
+        break;
+    case "4":
+        $isOK = Progression\progression();
+        break;
 }
 Funcs\by($name, $isOK);
