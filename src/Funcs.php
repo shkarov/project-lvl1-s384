@@ -55,13 +55,13 @@ function createArray($num1, $num2)
 }
 function createStrProgress($arr, $numHidden)
 {
-    $strProgress = "";    
+    $strProgress = "";
     foreach ($arr as $key => $value) {
         if ($key !== $numHidden) {
             $strProgress .= " {$value}";
         } else {
-            $strProgress .= " ..";  
-        }    
+            $strProgress .= " ..";
+        }
     }
     return $strProgress;
 }
