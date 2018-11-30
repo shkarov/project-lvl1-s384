@@ -1,8 +1,6 @@
 {
     "name": "shkarov/brain-games",
-    "bin": [
-	"bin/brain-start"
-    ],
+    "bin": ["bin/brain-start"],
     "description": "Project Brain Games",
     "type": "project",
     "authors": [
@@ -18,9 +16,10 @@
          "psr-4": {
              "BrainGames\\CheckParity\\": "src/",
              "BrainGames\\Calc\\": "src/",
-             "BrainGames\\Funcs\\": "src/"
+             "BrainGames\\Funcs\\": "src/",
+             "BrainGames\\Gcd\\": "src/"
          },
-         "files": ["src/CheckParity.php", "src/Calc.php", "src/Funcs.php"]
+         "files": ["src/CheckParity.php", "src/Calc.php", "src/Funcs.php", "src/Gcd.php"]
     },	
     "require": {
         "wp-cli/php-cli-tools": "*"
