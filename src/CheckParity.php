@@ -10,8 +10,8 @@ function check()
     for ($i = 0; $i < 3; $i++) {
         $rNum = rand(1, 100);
         \cli\line("Question:, %s", $rNum);
-        $answer = \cli\prompt('Your answer');
-        if ((Funcs\isParity($rNum) && strtolower($answer) == "yes") || (!Funcs\isParity($rNum) && strtolower($answer) == "no")) {
+        $a = \cli\prompt('Your answer');
+        if ((Funcs\isParity($rNum) && strtolower($a) == "yes") || (!Funcs\isParity($rNum) && strtolower($a) == "no")) {
             $countCorrect += 1;
             \cli\line('Correct!');
         } else {
