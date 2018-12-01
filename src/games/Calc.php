@@ -3,6 +3,25 @@ namespace BrainGames\Calc;
 
 use BrainGames\Engine;
 
+function calc()
+{
+    $rule = 'What is the result of the expression?';
+    $funcName = 'BrainGames\Calc\logicCalc';
+    Engine\engine($rule, $funcName);
+    return;
+}
+function logicCalc()
+{
+    $arrSigns = array('+', '-', '*');
+    $qa = [];
+    $rNum1 = rand(1, 100);
+    $rNum2 = rand(1, 100);
+    $signIndex = array_rand($arrSigns);
+    $sign = $arrSigns[$signIndex];
+    $qa['qwestion'] = "{$rNum1} {$sign} {$rNum2}";
+    $qa['answer'] = arithmetic($rNum1, $rNum2, $sign);
+    return $qa;
+}
 function arithmetic($num1, $num2, $sign)
 {
     switch ($sign) {
@@ -13,20 +32,4 @@ function arithmetic($num1, $num2, $sign)
         case "*":
             return $num1 * $num2;
     }
-}
-function calc()
-{
-    $arrSigns = array('+', '-', '*');
-    $argsForEngine = [];
-    $argsForEngine["rule"] = 'What is the result of the expression?';
-    for ($i = 0; $i < 3; $i++) {
-        $rNum1 = rand(1, 100);
-        $rNum2 = rand(1, 100);
-        $signIndex = array_rand($arrSigns);
-        $sign = $arrSigns[$signIndex];
-        $argsForEngine["question{$i}"] = "{$rNum1} {$sign} {$rNum2}";
-        $argsForEngine["answer{$i}"] = arithmetic($rNum1, $rNum2, $sign);
-    }
-    Engine\engine($argsForEngine);
-    return;
 }

@@ -1,25 +1,26 @@
 <?php
 namespace BrainGames\Engine;
 
-function engine($argsForEngine)
-{
+const COUNT_REPEATS = 3;
+
+function engine($rule, $funcName) {
     \cli\line('Welcome to the Brain Games!');
     $player = \cli\prompt('May I have your name?');
     \cli\line("Hello, %s!", $player);
-    \cli\line($argsForEngine["rule"]);
-
+    \cli\line($rule);
     $countCorrect = 0;
-    for ($i = 0; $i < 3; $i++) {
-        \cli\line("Question:, %s", $argsForEngine["question{$i}"]);
+    for ($i = 0; $i < COUNT_REPEATS; $i++) {
+        $qwestAnswer = $funcName();
+        \cli\line("Question: %s", $qwestAnswer['qwestion']);
         $answer = \cli\prompt('Your answer');
-        if ($answer == $argsForEngine["answer{$i}"]) {
+        if ($answer == $qwestAnswer['answer']) {
             $countCorrect += 1;
             \cli\line('Correct!');
         } else {
             break;
         }
     }
-    if ($countCorrect == 3) {
+    if ($countCorrect == COUNT_REPEATS) {
         \cli\line("Congratulations, %s!", $player);
     } else {
         \cli\line('It is wrong answer :-).');

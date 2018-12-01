@@ -3,6 +3,25 @@ namespace BrainGames\Progression;
 
 use BrainGames\Engine;
 
+function progression()
+{
+    $rule = 'What number is missing in the progression?';
+    $funcName = 'BrainGames\Progression\logicProgress';
+    Engine\engine($rule, $funcName);
+    return;
+}
+function logicProgress()
+{
+    $rNumStart = rand(1, 100);
+    $rNumAdd = rand(1, 20);
+    $rNumHidden = rand(0, 9);
+    $arrProgress = createArray($rNumStart, $rNumAdd);
+    $strProgress = createStrProgress($arrProgress, $rNumHidden);
+    $qa = [];
+    $qa['qwestion'] = "{$strProgress}";
+    $qa['answer'] = $arrProgress[$rNumHidden];
+    return $qa;
+}
 function createArray($rNumStart, $rNumAdd)
 {
     $arr = [];
@@ -23,21 +42,4 @@ function createStrProgress($arr, $numHidden)
         }
     }
     return $strProgress;
-}
-function progression()
-{
-    $argsForEngine = [];
-    $argsForEngine["rule"] = 'What number is missing in the progression?';
-    $countCorrect = 0;
-    for ($i = 0; $i < 3; $i++) {
-        $rNumStart = rand(1, 100);
-        $rNumAdd = rand(1, 20);
-        $rNumHidden = rand(0, 9);
-        $arrProgress = createArray($rNumStart, $rNumAdd);
-        $strProgress = createStrProgress($arrProgress, $rNumHidden);
-        $argsForEngine["question{$i}"] = "{$strProgress}";
-        $argsForEngine["answer{$i}"] = $arrProgress[$rNumHidden];
-    }
-    Engine\engine($argsForEngine);
-    return;
 }
