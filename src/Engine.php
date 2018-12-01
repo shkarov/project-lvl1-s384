@@ -3,7 +3,7 @@ namespace BrainGames\Engine;
 
 const COUNT_REPEATS = 3;
 
-function engine($rule, $funcName) 
+function engine($rule, $funcName)
 {
     \cli\line('Welcome to the Brain Games!');
     $player = \cli\prompt('May I have your name?');
