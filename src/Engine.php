@@ -9,23 +9,26 @@ function engine($rule, $funcName)
     $player = \cli\prompt('May I have your name?');
     \cli\line("Hello, %s!", $player);
     \cli\line($rule);
-    $countCorrect = 0;
-    for ($i = 0; $i < COUNT_REPEATS; $i++) {
-        $qwestAnswer = $funcName();
-        \cli\line("Question: %s", $qwestAnswer['qwestion']);
-        $answer = \cli\prompt('Your answer');
-        if ($answer == $qwestAnswer['answer']) {
-            $countCorrect += 1;
-            \cli\line('Correct!');
-        } else {
-            break;
-        }
-    }
-    if ($countCorrect == COUNT_REPEATS) {
+    if (callGame($funcName, COUNT_REPEATS)) {
         \cli\line("Congratulations, %s!", $player);
     } else {
         \cli\line('It is wrong answer :-).');
         \cli\line("Let's try again, %s!", $player);
     }
     return;
+}
+function callGame($funcName, $counter)
+{
+    if ($counter == 0) {
+        return true;
+    }
+    $qwestAnswer = $funcName();
+    \cli\line("Question: %s", $qwestAnswer['qwestion']);
+    $answer = \cli\prompt('Your answer');
+    if ($answer == $qwestAnswer['answer']) {
+        \cli\line('Correct!');
+        return callGame($funcName, $counter - 1);
+    } else {
+        return false;
+    }
 }
