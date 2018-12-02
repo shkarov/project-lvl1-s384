@@ -3,8 +3,6 @@ namespace BrainGames\Prime;
 
 use BrainGames\Engine;
 
-const FIRST_PRIME = 2;
-
 function prime()
 {
     $rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -18,14 +16,14 @@ function checkPrime()
     $qa = [];
     $qa['qwestion'] = $rNum;
 
-    if (isPrime($rNum, FIRST_PRIME)) {
+    if (isPrime($rNum)) {
         $qa['answer'] = "yes";
     } else {
         $qa['answer'] = "no";
     }
     return $qa;
 }
-function isPrime($num, $counter)
+function isPrime($num, $counter = 2)
 {
     if ($num < 2) {
         return false;
