@@ -6,23 +6,23 @@ use BrainGames\Engine;
 function progression()
 {
     $rule = 'What number is missing in the progression?';
-    $funcName = 'BrainGames\Progression\logicProgress';
+    $funcName = 'BrainGames\Progression\restoreArithmeticProgression';
     Engine\engine($rule, $funcName);
     return;
 }
-function logicProgress()
+function restoreArithmeticProgression()
 {
     $rNumStart = rand(1, 100);
     $rNumAdd = rand(1, 20);
     $rNumHidden = rand(0, 9);
-    $arrProgress = createArray($rNumStart, $rNumAdd);
-    $strProgress = createStrProgress($arrProgress, $rNumHidden);
+    $arrProgress = createProgression($rNumStart, $rNumAdd);
+    $strProgress = createProgressionWithMissingMember($arrProgress, $rNumHidden);
     $qa = [];
     $qa['qwestion'] = "{$strProgress}";
     $qa['answer'] = $arrProgress[$rNumHidden];
     return $qa;
 }
-function createArray($rNumStart, $rNumAdd)
+function createProgression($rNumStart, $rNumAdd)
 {
     $arr = [];
     $arr[0] = $rNumStart;
@@ -31,7 +31,7 @@ function createArray($rNumStart, $rNumAdd)
     }
     return $arr;
 }
-function createStrProgress($arr, $numHidden)
+function createProgressionWithMissingMember($arr, $numHidden)
 {
     $strProgress = "";
     foreach ($arr as $key => $value) {

@@ -6,20 +6,20 @@ use BrainGames\Engine;
 function gcd()
 {
     $rule = 'Find the greatest common divisor of given numbers.';
-    $funcName = 'BrainGames\Gcd\logicGcd';
+    $funcName = 'BrainGames\Gcd\calcGcd';
     Engine\engine($rule, $funcName);
     return;
 }
-function logicGcd()
+function calcGCD()
 {
     $rNum1 = rand(1, 100);
     $rNum2 = rand(1, 100);
     $qa = [];
     $qa['qwestion'] = "{$rNum1} {$rNum2}";
-    $qa['answer'] = algEuclidian($rNum1, $rNum2);
+    $qa['answer'] = calcEuclidianAlgorithm($rNum1, $rNum2);
     return $qa;
 }
-function algEuclidian($num1, $num2)
+function calcEuclidianAlgorithm($num1, $num2)
 {
     while ($num1 !== $num2) {
         if ($num1 > $num2) {

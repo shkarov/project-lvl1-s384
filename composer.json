@@ -5,7 +5,8 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "description": "Project Brain Games",
     "type": "project",
@@ -25,7 +26,8 @@
             "BrainGames\\CheckParity\\": "src/games",
             "BrainGames\\Calc\\": "src/games",
             "BrainGames\\Gcd\\": "src/games",
-            "BrainGames\\Progression\\": "src/games"
+            "BrainGames\\Progression\\": "src/games",
+            "BrainGames\\Prime\\": "src/games"
         },
         "files": [
             "src/Cli.php", 
@@ -33,7 +35,8 @@
             "src/games/CheckParity.php", 
             "src/games/Calc.php", 
             "src/games/Gcd.php",
-            "src/games/Progression.php"
+            "src/games/Progression.php",
+            "src/games/Prime.php"
         ]
     },	
     "require": {

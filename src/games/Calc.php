@@ -6,11 +6,11 @@ use BrainGames\Engine;
 function calc()
 {
     $rule = 'What is the result of the expression?';
-    $funcName = 'BrainGames\Calc\logicCalc';
+    $funcName = 'BrainGames\Calc\calcArithmeticExpressin';
     Engine\engine($rule, $funcName);
     return;
 }
-function logicCalc()
+function calcArithmeticExpressin()
 {
     $arrSigns = array('+', '-', '*');
     $qa = [];
@@ -19,10 +19,10 @@ function logicCalc()
     $signIndex = array_rand($arrSigns);
     $sign = $arrSigns[$signIndex];
     $qa['qwestion'] = "{$rNum1} {$sign} {$rNum2}";
-    $qa['answer'] = arithmetic($rNum1, $rNum2, $sign);
+    $qa['answer'] = calculation($rNum1, $rNum2, $sign);
     return $qa;
 }
-function arithmetic($num1, $num2, $sign)
+function calculation($num1, $num2, $sign)
 {
     switch ($sign) {
         case "+":
