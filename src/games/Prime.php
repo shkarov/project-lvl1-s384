@@ -32,7 +32,7 @@ function isPrime($num, $counter)
     }
     if ($num == 2) {
         return true;
-    }    
+    }
     if ($num % $counter == 0) {
         return false;
     }
