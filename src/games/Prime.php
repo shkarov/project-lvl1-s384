@@ -35,6 +35,4 @@ function isPrime($num)
         }
     }
     return true;
-
-    return ($number % 2 == 0) ? true : false;
 }
