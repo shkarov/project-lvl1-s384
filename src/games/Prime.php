@@ -25,9 +25,15 @@ function checkPrime()
 }
 function isPrime($num, $counter = 2)
 {
-    if ($num < 2) {return false;}
-    if ($num == 2) {return true;}    
-    if ($num % $counter == 0) {return false;}
+    if ($num < 2) {
+        return false;
+    }
+    if ($num == 2) {
+        return true;
+    }
+    if ($num % $counter == 0) {
+        return false;
+    }
     if ($counter <= round(sqrt($num))) {
         return isPrime($num, $counter + 1);
     } else {
