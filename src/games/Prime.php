@@ -14,7 +14,7 @@ function checkPrime()
 {
     $rNum = rand(1, 100);
     $qa = [];
-    $qa['qwestion'] = $rNum;
+    $qa['question'] = $rNum;
 
     if (isPrime($rNum)) {
         $qa['answer'] = "yes";

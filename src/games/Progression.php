@@ -18,7 +18,7 @@ function restoreArithmeticProgression()
     $arrProgress = createProgression($rNumStart, $rNumAdd);
     $strProgress = createProgressionWithMissingMember($arrProgress, $rNumHidden);
     $qa = [];
-    $qa['qwestion'] = "{$strProgress}";
+    $qa['question'] = "{$strProgress}";
     $qa['answer'] = $arrProgress[$rNumHidden];
     return $qa;
 }

@@ -15,7 +15,7 @@ function calcGCD()
     $rNum1 = rand(1, 100);
     $rNum2 = rand(1, 100);
     $qa = [];
-    $qa['qwestion'] = "{$rNum1} {$rNum2}";
+    $qa['question'] = "{$rNum1} {$rNum2}";
     $qa['answer'] = calcEuclidianAlgorithm($rNum1, $rNum2);
     return $qa;
 }

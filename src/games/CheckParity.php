@@ -14,7 +14,7 @@ function logicParity()
 {
     $rNum = rand(1, 100);
     $qa = [];
-    $qa['qwestion'] = $rNum;
+    $qa['question'] = $rNum;
 
     if (isParity($rNum)) {
         $qa['answer'] = "yes";

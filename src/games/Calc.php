@@ -18,7 +18,7 @@ function calcArithmeticExpressin()
     $rNum2 = rand(1, 100);
     $signIndex = array_rand($arrSigns);
     $sign = $arrSigns[$signIndex];
-    $qa['qwestion'] = "{$rNum1} {$sign} {$rNum2}";
+    $qa['question'] = "{$rNum1} {$sign} {$rNum2}";
     $qa['answer'] = calculation($rNum1, $rNum2, $sign);
     return $qa;
 }

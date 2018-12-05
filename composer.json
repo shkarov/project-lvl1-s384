@@ -1,7 +1,6 @@
 {
     "name": "shkarov/brain-games",
     "bin": [
-        "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
@@ -21,7 +20,6 @@
     },
     "autoload": {
         "psr-4": {
-            "BrainGames\\Cli\\": "src/",
             "BrainGames\\Engine\\": "src/",
             "BrainGames\\CheckParity\\": "src/games",
             "BrainGames\\Calc\\": "src/games",
@@ -30,7 +28,6 @@
             "BrainGames\\Prime\\": "src/games"
         },
         "files": [
-            "src/Cli.php", 
             "src/Engine.php", 
             "src/games/CheckParity.php", 
             "src/games/Calc.php", 

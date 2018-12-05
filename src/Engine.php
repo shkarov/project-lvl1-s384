@@ -1,19 +1,21 @@
 <?php
 namespace BrainGames\Engine;
 
+use function cli\line;
+
 const COUNT_REPEATS = 3;
 
 function engine($rule, $funcName)
 {
-    \cli\line('Welcome to the Brain Games!');
+    line('Welcome to the Brain Games!');
     $player = \cli\prompt('May I have your name?');
-    \cli\line("Hello, %s!", $player);
-    \cli\line($rule);
+    line("Hello, %s!", $player);
+    line($rule);
     if (callGame($funcName, COUNT_REPEATS)) {
-        \cli\line("Congratulations, %s!", $player);
+        line("Congratulations, %s!", $player);
     } else {
-        \cli\line('It is wrong answer :-).');
-        \cli\line("Let's try again, %s!", $player);
+        line('It is wrong answer :-).');
+        line("Let's try again, %s!", $player);
     }
     return;
 }
@@ -23,10 +25,10 @@ function callGame($funcName, $counter)
         return true;
     }
     $qwestAnswer = $funcName();
-    \cli\line("Question: %s", $qwestAnswer['qwestion']);
+    line("Question: %s", $qwestAnswer['question']);
     $answer = \cli\prompt('Your answer');
     if ($answer == $qwestAnswer['answer']) {
-        \cli\line('Correct!');
+        line('Correct!');
         return callGame($funcName, $counter - 1);
     } else {
         return false;
