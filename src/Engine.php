@@ -2,6 +2,7 @@
 namespace BrainGames\Engine;
 
 use function cli\line;
+use function cli\prompt;
 
 const COUNT_REPEATS = 3;
 
@@ -26,7 +27,7 @@ function callGame($funcName, $counter)
     }
     $qwestAnswer = $funcName();
     line("Question: %s", $qwestAnswer['question']);
-    $answer = \cli\prompt('Your answer');
+    $answer = prompt('Your answer');
     if ($answer == $qwestAnswer['answer']) {
         line('Correct!');
         return callGame($funcName, $counter - 1);
