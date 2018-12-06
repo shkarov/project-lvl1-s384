@@ -35,7 +35,9 @@
             "src/games/Progression.php",
             "src/games/Prime.php"
         ]
-    },	
+    },
+            "license": "MIT"
+    ,
     "require": {
         "wp-cli/php-cli-tools": "*"
     },
