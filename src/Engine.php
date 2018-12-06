@@ -9,7 +9,7 @@ const COUNT_REPEATS = 3;
 function engine($rule, $funcName)
 {
     line('Welcome to the Brain Games!');
-    $player = \cli\prompt('May I have your name?');
+    $player = prompt('May I have your name?');
     line("Hello, %s!", $player);
     line($rule);
     if (callGame($funcName, COUNT_REPEATS)) {
